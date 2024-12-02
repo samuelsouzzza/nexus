@@ -1,0 +1,45 @@
+.container {
+  background-color: var(--bg-box);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 75px;
+  padding: 0 10%;
+}
+.boxLogo {
+  width: 15%;
+}
+
+.ulBoxLinks,
+.ulBoxInfo {
+  display: flex;
+  align-items: center;
+}
+.ulBoxLinks {
+  justify-content: space-between;
+  width: 60%;
+}
+.ulBoxInfo {
+  width: 25%;
+}
+.container ul li {
+  list-style: none;
+}
+.container .links {
+  margin: 0 10px;
+  list-style: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  /* background-color: red; */
+}
+.container li:hover {
+  background-color: var(--bg-item);
+}
+.linkActive {
+  background-color: var(--primary);
+}
+/* .links {
+  text-decoration: none;
+} */
