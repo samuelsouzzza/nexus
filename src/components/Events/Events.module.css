@@ -1,0 +1,13 @@
+.container {
+}
+.titleBox {
+  margin: 0 0 5% 0;
+  font-weight: 500;
+}
+.titleBox a {
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+  text-decoration: none;
+  gap: 2%;
+}
