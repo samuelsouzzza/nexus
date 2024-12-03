@@ -1,11 +1,7 @@
-import type { Metadata } from 'next';
+'use client';
 import './globals.css';
 import { Nav } from '../components/Nav/Nav';
-
-export const metadata: Metadata = {
-  title: 'Nexus | Ligando ideias',
-  description: 'Nexus | Ligando ideias',
-};
+import { AppProgressBar } from 'next-nprogress-bar';
 
 export default function RootLayout({
   children,
@@ -15,6 +11,12 @@ export default function RootLayout({
   return (
     <html lang='pt-br'>
       <body>
+        <AppProgressBar
+          height='4px'
+          color='var(--primary)'
+          options={{ showSpinner: false }}
+          shallowRouting
+        />
         <Nav />
         {children}
       </body>

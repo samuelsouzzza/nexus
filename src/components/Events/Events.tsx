@@ -60,7 +60,7 @@ export const Events = () => {
                 </p>
               </div>
               <div>
-                <p className={styles.qtdInterest}>25 interessados</p>
+                <p className={styles.qtdInteresed}>25 interessados</p>
                 <div>
                   <Image
                     src={'/profile.svg'}

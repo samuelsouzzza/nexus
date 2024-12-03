@@ -11,45 +11,48 @@ import {
 } from 'react-icons/io5';
 import { Profile } from '../Profile/Profile';
 import React from 'react';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export const Nav = () => {
-  const [activeTab, setActiveTab] = React.useState('/');
-
-  function handleActiveTab(tab: string) {
-    setActiveTab(tab);
-  }
+  const currentPath = usePathname();
 
   return (
     <nav className={styles.container}>
       <div className={styles.boxLogo}>
-        <h2>Nexus</h2>
+        <Image
+          src={'/logos/logowhite.svg'}
+          height={25}
+          width={150}
+          alt='Logo'
+        />
       </div>
 
       <ul className={styles.ulBoxLinks}>
         <li
           className={`${styles.links} ${
-            activeTab === '/' && styles.linkActive
+            currentPath === '/' && styles.linkActive
           }`}
         >
-          <Link href={'/'} onClick={() => handleActiveTab('/')}>
+          <Link href={'/'}>
             <IoHome size={20} />
           </Link>
         </li>
         <li
           className={`${styles.links} ${
-            activeTab === 'events' && styles.linkActive
+            currentPath === '/events' && styles.linkActive
           }`}
         >
-          <Link href={'/events'} onClick={() => handleActiveTab('events')}>
+          <Link href={'/events'}>
             <IoCalendar size={20} />
           </Link>
         </li>
         <li
           className={`${styles.links} ${
-            activeTab === 'peoples' && styles.linkActive
+            currentPath === '/peoples' && styles.linkActive
           }`}
         >
-          <Link href={'/peoples'} onClick={() => handleActiveTab('peoples')}>
+          <Link href={'/peoples'}>
             <IoPeople size={20} />
           </Link>
         </li>
@@ -59,17 +62,15 @@ export const Nav = () => {
       <ul className={styles.ulBoxInfo}>
         <li
           className={`${styles.links} ${
-            activeTab === 'chat' && styles.linkActive
+            currentPath === '/chats' && styles.linkActive
           }`}
-          onClick={() => handleActiveTab('chat')}
         >
           <IoChatbubbleEllipses size={20} />
         </li>
         <li
           className={`${styles.links} ${
-            activeTab === 'notifications' && styles.linkActive
+            currentPath === '/notifications' && styles.linkActive
           }`}
-          onClick={() => handleActiveTab('notifications')}
         >
           <IoNotifications size={20} />
         </li>
