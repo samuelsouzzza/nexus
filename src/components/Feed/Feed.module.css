@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--bg-box);
+  background-color: var(--bg);
   width: 100%;
   grid-area: main;
 }

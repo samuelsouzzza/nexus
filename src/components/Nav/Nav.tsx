@@ -16,6 +16,7 @@ import { usePathname } from 'next/navigation';
 
 export const Nav = () => {
   const currentPath = usePathname();
+  const [searchValue, setSearchedValue] = React.useState('');
 
   return (
     <nav className={styles.container}>
@@ -56,7 +57,14 @@ export const Nav = () => {
             <IoPeople size={20} />
           </Link>
         </li>
-        <InputText />
+        <InputText
+          type='text'
+          placeholder='Busque por pessoas, posts ou eventos'
+          value={searchValue}
+          setValue={setSearchedValue}
+          modal='searchAll'
+          icon='search'
+        />
       </ul>
 
       <ul className={styles.ulBoxInfo}>

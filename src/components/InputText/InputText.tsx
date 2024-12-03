@@ -1,9 +1,23 @@
+'use client';
 import styles from './InputText.module.css';
-import { IoSearch } from 'react-icons/io5';
 import { ModalSearchAll } from '../ModalSearchAll/ModalSearchAll';
 import React from 'react';
+import getInputTextIcon from '@/utils/getInputTextIcon';
 
-export const InputText = () => {
+type InputTextProps = React.ComponentProps<'input'> & {
+  value: string;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
+  modal: 'createPost' | 'searchAll';
+  icon?: string;
+};
+
+export const InputText = ({
+  value,
+  setValue,
+  modal,
+  icon,
+  ...props
+}: InputTextProps) => {
   const [valueSearched, setValueSearched] = React.useState('');
   const refMenu = React.useRef<HTMLDivElement>(null);
 
@@ -23,13 +37,12 @@ export const InputText = () => {
   return (
     <div className={styles.container} ref={refMenu}>
       <input
-        type='text'
+        {...props}
         className={styles.input}
-        placeholder='Busque por pessoas, postagens, eventos e mais'
         value={valueSearched}
         onChange={(e) => setValueSearched(e.target.value)}
       />
-      <IoSearch size={20} className={styles.ico} />
+      {icon && getInputTextIcon(icon)}
 
       <ModalSearchAll active={valueSearched.length > 0} str={valueSearched} />
     </div>

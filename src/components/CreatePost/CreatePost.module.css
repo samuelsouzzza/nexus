@@ -1,0 +1,9 @@
+.container {
+  background-color: var(--bg-box);
+  border-radius: 8px;
+  display: flex;
+  position: relative;
+  padding: 2%;
+  align-items: center;
+  justify-content: center;
+}
