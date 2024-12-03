@@ -1,13 +1,78 @@
 .container {
+  display: flex;
+  flex-direction: column;
 }
 .titleBox {
-  margin: 0 0 5% 0;
+  margin: 0 0 2% 0;
   font-weight: 500;
 }
 .titleBox a {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: flex-start;
   text-decoration: none;
   gap: 2%;
+}
+.boxDate {
+  display: flex;
+  gap: 2%;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.boxDate:hover {
+  background-color: var(--bg-item);
+}
+.qtdInterest {
+  color: var(--font-nd);
+  font-size: 0.8rem;
+}
+.itemDate {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0;
+  align-items: center;
+  padding: 2% 5%;
+  background-color: var(--bg-item);
+  border-radius: 8px;
+  gap: 5%;
+}
+.itemDate span {
+  color: var(--secondary);
+  font-size: 1.5rem;
+}
+.boxInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+.boxInfo p {
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+  width: 95%;
+}
+.boxOwnerEvent {
+  display: flex;
+  gap: 2%;
+}
+.boxOwnerEvent p {
+  font-size: 0.85rem;
+  color: var(--font-nd);
+}
+.boxSubject {
+  display: flex;
+  gap: 0 1%;
+  margin: 1% 0;
+}
+.boxSubject span {
+  background-color: var(--bg-item);
+  border-radius: 50px;
+  padding: 1px 8px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--font-bg);
 }

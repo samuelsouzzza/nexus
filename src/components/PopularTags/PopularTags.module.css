@@ -11,7 +11,7 @@
 }
 .titleBox a {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: flex-start;
   text-decoration: none;
   gap: 2%;
@@ -41,7 +41,7 @@
 }
 .qtdPosts {
   font-size: 0.75rem;
-  color: var(--font-300);
+  color: var(--font-nd);
 }
 .viewMore {
   font-size: 0.8rem;

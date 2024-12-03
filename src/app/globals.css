@@ -4,10 +4,11 @@
   --bg-box: #262d34;
   --bg-item: #2c353d;
   --font: #c2c5c6;
-  --font-300: #c2c5c650;
+  --font-nd: #97989d;
   --primary: #ff4401;
   --primary-300: #ff450150;
   --font-bg: #858ead;
+  --secondary: #5d95e8;
 }
 ::selection {
   background-color: var(--primary);
