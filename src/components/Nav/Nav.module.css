@@ -9,8 +9,8 @@
   box-shadow: 0px 0px 5px 1px var(--shadow);
 }
 .boxLogo {
-  width: 15%;
-  margin: 0 5%;
+  /* width: 15%; */
+  margin: 0 3%;
 }
 
 .ulBoxLinks,
@@ -20,11 +20,11 @@
 }
 .ulBoxLinks {
   justify-content: space-between;
-  width: 65%;
+  width: 100%;
   margin: 0 5%;
 }
 .ulBoxInfo {
-  width: 20%;
+  /* width: 30%; */
 }
 .container ul li {
   list-style: none;

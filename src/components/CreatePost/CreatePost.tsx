@@ -15,6 +15,8 @@ export const CreatePost = () => {
         modal='createPost'
         icon='rocket'
         placeholder='Diga o que está pensando...'
+        multilines
+        maxLength={500}
       />
     </div>
   );

@@ -2,12 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
   width: 100%;
   background-color: var(--bg-item);
-  padding: 1% 3%;
   margin: 0 3%;
   border-radius: 8px;
   position: relative;
+}
+.boxInputs {
+  padding: 1% 3%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .input {
   background-color: var(--bg-item);
@@ -19,9 +26,19 @@
   padding: 1%;
   outline: none;
 }
-.input::placeholder {
+.input::placeholder,
+.textArea::placeholder {
   font-style: italic;
   color: var(--font-bg);
+}
+.textArea {
+  width: 100%;
+  background-color: var(--bg-item);
+  border: none;
+  outline: none;
+  font-size: 1.11rem;
+  resize: none;
+  overflow-y: visible;
 }
 .ico path {
   fill: var(--font-bg);

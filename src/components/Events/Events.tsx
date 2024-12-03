@@ -39,50 +39,49 @@ export const Events = () => {
         </Link>
       </div>
 
-      {events.map((e) => {
-        return (
-          <div key={e.id} className={styles.boxDate}>
-            <div className={styles.itemDate}>
-              <p>{e.date.month}</p>
-              <span>{e.date.day.toString().padStart(2, '0')}</span>
-            </div>
-            <div className={styles.boxInfo}>
-              <p>{e.title}</p>
-              <div className={styles.boxOwnerEvent}>
-                <Image
-                  src={`${e.owner.profilePic}`}
-                  alt='Foto de perfil'
-                  width={20}
-                  height={20}
-                />
-                <p>
-                  {e.owner.name} • {e.local}
-                </p>
-              </div>
+      <div className={styles.boxDate}>
+        {events.map((e) => {
+          return (
+            <div key={e.id} className={styles.itemDate}>
               <div>
-                <p className={styles.qtdInteresed}>25 interessados</p>
-                <div>
-                  <Image
-                    src={'/profile.svg'}
-                    alt='Fotos de perfil'
-                    width={15}
-                    height={15}
-                  />
-                  <Image
-                    src={'/profile.svg'}
-                    alt='Fotos de perfil'
-                    width={15}
-                    height={15}
-                  />
-                  <Image
-                    src={'/profile.svg'}
-                    alt='Fotos de perfil'
-                    width={15}
-                    height={15}
-                  />
-                </div>
+                <p>{e.date.month}</p>
+                <span>{e.date.day.toString().padStart(2, '0')}</span>
               </div>
-              {/* <div className={styles.boxSubject}>
+              <div className={styles.boxInfo}>
+                <p>{e.title}</p>
+                <div className={styles.boxOwnerEvent}>
+                  <Image
+                    src={`${e.owner.profilePic}`}
+                    alt='Foto de perfil'
+                    width={20}
+                    height={20}
+                  />
+                  <p>{e.owner.name}</p>
+                </div>
+                <div>
+                  <div>
+                    {/* <p className={styles.qtdInteresed}>25 interessados</p> */}
+                    <Image
+                      src={'/profile.svg'}
+                      alt='Fotos de perfil'
+                      width={15}
+                      height={15}
+                    />
+                    <Image
+                      src={'/profile.svg'}
+                      alt='Fotos de perfil'
+                      width={15}
+                      height={15}
+                    />
+                    <Image
+                      src={'/profile.svg'}
+                      alt='Fotos de perfil'
+                      width={15}
+                      height={15}
+                    />
+                  </div>
+                </div>
+                {/* <div className={styles.boxSubject}>
                 {e.subject.map((s) => {
                   return (
                     <div key={s}>
@@ -91,10 +90,11 @@ export const Events = () => {
                   );
                 })}
               </div> */}
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

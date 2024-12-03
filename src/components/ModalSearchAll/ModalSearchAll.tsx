@@ -15,7 +15,7 @@ export const ModalSearchAll = ({ active, str }: ModalSearchAllProps) => {
       }}
       transition={{ duration: '0.1' }}
       className={styles.container}
-      //   style={{ visibility: active ? 'visible' : 'hidden' }}
+      style={{ visibility: active ? 'visible' : 'hidden' }}
     >
       <p>
         Exibindo resultados para

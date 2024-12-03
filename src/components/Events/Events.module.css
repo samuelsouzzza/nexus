@@ -16,34 +16,35 @@
 }
 .boxDate {
   display: flex;
-  gap: 2%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   border-radius: 8px;
-  transition: 0.3s;
-  cursor: pointer;
+  padding: 2%;
 }
-.boxDate:hover {
-  background-color: var(--bg-item);
-}
-.qtdInteresed {
-  color: var(--font-nd);
-  font-size: 0.8rem;
-}
+
 .itemDate {
+  transition: 0.3s;
   display: flex;
-  flex-direction: column;
-  margin: 5% 0;
+  justify-content: flex-start;
   align-items: center;
   padding: 2% 5%;
-  background-color: var(--bg-item);
+  background-color: var(--bg-box);
   border-radius: 8px;
   gap: 5%;
+  width: 100%;
+  cursor: pointer;
+}
+.itemDate:hover {
+  background-color: var(--bg-item);
 }
 .itemDate span {
   color: var(--secondary);
   font-size: 1.5rem;
+}
+.itemDate div {
+  max-width: 100%;
 }
 .boxInfo {
   display: flex;
@@ -54,7 +55,7 @@
   text-overflow: ellipsis;
   overflow-x: hidden;
   white-space: nowrap;
-  width: 95%;
+  width: 80%;
 }
 .boxOwnerEvent {
   display: flex;
