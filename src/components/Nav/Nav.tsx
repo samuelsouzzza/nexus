@@ -8,6 +8,7 @@ import {
   IoPeople,
   IoChatbubbleEllipses,
   IoNotifications,
+  IoTrophy,
 } from 'react-icons/io5';
 import { Profile } from '../Profile/Profile';
 import React from 'react';
@@ -21,12 +22,14 @@ export const Nav = () => {
   return (
     <nav className={styles.container}>
       <div className={styles.boxLogo}>
-        <Image
-          src={'/logos/logowhite.svg'}
-          height={25}
-          width={150}
-          alt='Logo'
-        />
+        <Link href={'/'}>
+          <Image
+            src={'/logos/logowhite.svg'}
+            height={25}
+            width={150}
+            alt='Logo'
+          />
+        </Link>
       </div>
 
       <ul className={styles.ulBoxLinks}>
@@ -57,35 +60,47 @@ export const Nav = () => {
             <IoPeople size={20} />
           </Link>
         </li>
+        <li
+          className={`${styles.links} ${
+            currentPath === '/ranking' && styles.linkActive
+          }`}
+        >
+          <Link href={'/ranking'}>
+            <IoTrophy size={20} />
+          </Link>
+        </li>
         <InputText
           type='text'
-          placeholder='Busque por pessoas, posts ou eventos'
+          placeholder='Busque por perguntas, pessoas, hashtags ou mais'
           value={searchValue}
           setValue={setSearchedValue}
           modal='searchAll'
           icon='search'
         />
-      </ul>
-
-      <ul className={styles.ulBoxInfo}>
         <li
           className={`${styles.links} ${
             currentPath === '/chats' && styles.linkActive
           }`}
         >
-          <IoChatbubbleEllipses size={20} />
+          <Link href={'/chats'}>
+            <IoChatbubbleEllipses size={20} />
+          </Link>
         </li>
         <li
           className={`${styles.links} ${
             currentPath === '/notifications' && styles.linkActive
           }`}
         >
-          <IoNotifications size={20} />
+          <Link href={'/notifications'}>
+            <IoNotifications size={20} />
+          </Link>
         </li>
         <li className={styles.links}>
           <Profile />
         </li>
       </ul>
+
+      <ul className={styles.ulBoxInfo}></ul>
     </nav>
   );
 };

@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   background-color: var(--bg-box);
-  box-shadow: 0px 0px 5px 1px var(--shadow);
-  /* position: static; */
+  height: auto;
+  border-radius: 8px;
+  margin: 5% 0 0 0;
 }

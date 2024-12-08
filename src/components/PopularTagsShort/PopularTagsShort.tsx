@@ -1,9 +1,9 @@
-import styles from './PopularTags.module.css';
+import styles from './PopularTagsShort.module.css';
 import generateColorBackgroundTags from '@/utils/generateColorBackgroundTags';
 import Link from 'next/link';
 import { IoArrowForward } from 'react-icons/io5';
 
-export const PopularTags = () => {
+export const PopularTagsShort = () => {
   const tags = [
     { name: '#escala61', posts: 3654 },
     { name: '#guerraUcrania', posts: 3512 },

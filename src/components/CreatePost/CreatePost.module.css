@@ -6,4 +6,16 @@
   padding: 2%;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.profile {
+  width: 10%;
+  margin: 0 1%;
+}
+.boxInputText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

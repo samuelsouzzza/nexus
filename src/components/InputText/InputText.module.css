@@ -5,7 +5,8 @@
   flex-direction: column;
   width: 100%;
   background-color: var(--bg-item);
-  margin: 0 3%;
+  /* margin: 0 1%; */
+  padding: 0 2%;
   border-radius: 8px;
   position: relative;
 }
@@ -14,7 +15,10 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.boxInputs p {
+  color: var(--font-bg);
 }
 .input {
   background-color: var(--bg-item);
@@ -39,6 +43,7 @@
   font-size: 1.11rem;
   resize: none;
   overflow-y: visible;
+  field-sizing: content;
 }
 .ico path {
   fill: var(--font-bg);

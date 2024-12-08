@@ -1,9 +1,9 @@
-import styles from './Events.module.css';
+import styles from './EventsShorts.module.css';
 import Link from 'next/link';
 import { IoArrowForward } from 'react-icons/io5';
 import Image from 'next/image';
 
-export const Events = () => {
+export const EventsShort = () => {
   const events = [
     {
       id: 1532,

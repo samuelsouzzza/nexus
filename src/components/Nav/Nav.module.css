@@ -9,7 +9,6 @@
   box-shadow: 0px 0px 5px 1px var(--shadow);
 }
 .boxLogo {
-  /* width: 15%; */
   margin: 0 3%;
 }
 
@@ -21,7 +20,7 @@
 .ulBoxLinks {
   justify-content: space-between;
   width: 100%;
-  margin: 0 5%;
+  margin: 0 3%;
 }
 .ulBoxInfo {
   /* width: 30%; */
@@ -36,7 +35,6 @@
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
-  /* background-color: red; */
 }
 .container li:hover {
   background-color: var(--bg-item);
@@ -44,6 +42,3 @@
 .linkActive {
   background-color: var(--primary);
 }
-/* .links {
-  text-decoration: none;
-} */

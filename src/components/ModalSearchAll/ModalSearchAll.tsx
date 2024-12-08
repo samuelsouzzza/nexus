@@ -9,13 +9,10 @@ type ModalSearchAllProps = {
 export const ModalSearchAll = ({ active, str }: ModalSearchAllProps) => {
   return (
     <motion.div
-      animate={{
-        y: active ? 5 : -5,
-        opacity: active ? 1 : 0,
-      }}
-      transition={{ duration: '0.1' }}
+      animate={{ y: active ? 5 : -5, opacity: active ? 1 : 0 }}
+      transition={{ duration: 0.3 }}
       className={styles.container}
-      style={{ visibility: active ? 'visible' : 'hidden' }}
+      style={{ display: active && 'flex' }}
     >
       <p>
         Exibindo resultados para

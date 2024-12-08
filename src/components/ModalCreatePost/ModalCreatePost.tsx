@@ -1,19 +1,11 @@
 import styles from './ModalCreatePost.module.css';
+import { InputFile } from '../InputFile/InputFile';
 
-type ModalCreatePostProps = {
-  str: string;
-  active: boolean;
-};
+type ModalCreatePostProps = {};
 
-export const ModalCreatePost = ({ str, active }: ModalCreatePostProps) => {
+export const ModalCreatePost = ({}: ModalCreatePostProps) => {
   return (
-    <>
-      {active ? (
-        <div className={styles.container}>Modal de criação de posts</div>
-      ) : (
-        <></>
-      )}
-      {/* <div className={styles.container}>Modal de criação de posts</div> */}
-    </>
+    <div className={styles.container}>
+    </div>
   );
 };

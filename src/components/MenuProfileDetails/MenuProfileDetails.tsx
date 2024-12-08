@@ -19,7 +19,7 @@ export const MenuProfileDetails = ({ active }: MenuProfileDetailsProps) => {
         y: active ? 5 : -5,
         opacity: active ? 1 : 0,
       }}
-      transition={{ duration: '0.1' }}
+      transition={{ duration: 0.3 }}
       className={styles.container}
       style={{ visibility: active ? 'visible' : 'hidden' }}
     >

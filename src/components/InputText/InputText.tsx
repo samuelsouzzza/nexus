@@ -3,15 +3,14 @@ import styles from './InputText.module.css';
 import React from 'react';
 import getInputTextIcon from '@/utils/getInputTextIcon';
 import getInputTextModal from '@/utils/getInputTextModal';
-import autoResizeTextArea from '@/utils/autoResizeTextArea';
 
 type InputTextProps = React.ComponentProps<'input'> &
   React.ComponentProps<'textarea'> & {
     value: string;
     setValue: React.Dispatch<React.SetStateAction<string>>;
-    modal?: 'createPost' | 'searchAll' | undefined;
+    modal?: 'searchAll' | undefined;
     icon?: string;
-    multilines?: boolean;
+    multilines?: true | undefined;
   };
 
 export const InputText = ({
@@ -24,11 +23,16 @@ export const InputText = ({
 }: InputTextProps) => {
   const refMenu = React.useRef<HTMLDivElement>(null);
   const refTextArea = React.useRef<HTMLTextAreaElement>(null);
+  const [activeModal, setActiveModal] = React.useState(false);
+
+  React.useEffect(() => {
+    if (value) setActiveModal(true);
+  }, [value]);
 
   React.useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (refMenu.current && !refMenu.current.contains(event.target as Node)) {
-        setValue('');
+        setActiveModal(false);
       }
     }
 
@@ -37,10 +41,6 @@ export const InputText = ({
       document.removeEventListener('click', handleClickOutside);
     };
   }, []);
-
-  React.useEffect(() => {
-    // autoResizeTextArea(refTextArea.current);
-  }, [refTextArea.current?.value]);
 
   return (
     <div className={styles.container} ref={refMenu}>
@@ -52,10 +52,10 @@ export const InputText = ({
             className={styles.textArea}
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            rows={3}
+            rows={1}
             autoFocus
             placeholder='No que você está pensando agora?'
-            maxLength={1000}
+            maxLength={500}
           />
         ) : (
           <input
@@ -65,9 +65,10 @@ export const InputText = ({
             onChange={(e) => setValue(e.target.value)}
           />
         )}
-        {icon && getInputTextIcon(icon)}
+        <p>{multilines && value?.length + '/500'}</p>
+        {icon && getInputTextIcon(icon, 'var(--font-bg)')}
       </div>
-      <div>{modal && getInputTextModal(modal, value)}</div>
+      {modal && activeModal && getInputTextModal(modal as string, value)}
     </div>
   );
 };
