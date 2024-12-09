@@ -16,36 +16,34 @@ export const CreatePost = () => {
   >(null);
 
   return (
-    <>
-      <form className={styles.container}>
-        <div className={styles.boxInputText}>
-          <Image
-            src={'/profile.svg'}
-            height={40}
-            width={40}
-            alt='Foto de perfil'
-            className={styles.profile}
-          />
-          <InputText
-            value={valueNewPost}
-            setValue={setValueNewPost}
-            placeholder='Diga o que está pensando...'
-            multilines
-            maxLength={50}
-          />
-        </div>
-        <InputFile
-          id='inputFilesCreatePost'
-          value={selectedImgs as string & IImgsCreatePost[]}
-          setValue={setSelectedImgs}
-          onChange={(e) => loadImgs(e, setSelectedImgs)}
-          onDelete={deleteImgsInputFile}
+    <form className={styles.container}>
+      <div className={styles.boxInputText}>
+        <Image
+          src={'/profile.svg'}
+          height={40}
+          width={40}
+          alt='Foto de perfil'
+          className={styles.profile}
         />
-        {valueNewPost.length > 0 ||
-        (selectedImgs && selectedImgs.length > 0) ? (
-          <Button />
-        ) : null}
-      </form>
-    </>
+        <InputText
+          value={valueNewPost}
+          setValue={setValueNewPost}
+          placeholder='Diga o que está pensando...'
+          multilines
+          maxLength={50}
+        />
+      </div>
+      <InputFile
+        id='inputFilesCreatePost'
+        value={selectedImgs as string & IImgsCreatePost[]}
+        setValue={setSelectedImgs}
+        onChange={(e) => loadImgs(e, setSelectedImgs)}
+        onDelete={deleteImgsInputFile}
+      />
+      {valueNewPost.length > 0 || (selectedImgs && selectedImgs.length > 0) ? (
+        <Button />
+      ) : null}
+      {/* <Button /> */}
+    </form>
   );
 };

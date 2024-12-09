@@ -10,7 +10,7 @@ export function loadImgs(
 
   if (files !== null && files?.length > 0) {
     if (files.length > 5) {
-      alert('Não é possível subir mais de 3 imagens por publicação.');
+      alert('Não é possível subir mais de 5 imagens por publicação.');
       return false;
     }
 

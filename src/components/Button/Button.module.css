@@ -10,7 +10,7 @@
 .btn {
   background-color: var(--primary);
   height: 100%;
-  width: 35%;
+  width: 20%;
   border: none;
   font-size: 1.15rem;
   border-radius: 8px;
@@ -18,5 +18,5 @@
   transition: 0.3s;
 }
 .btn:hover {
-  filter: saturate(2);
+  filter: saturation(2);
 }
